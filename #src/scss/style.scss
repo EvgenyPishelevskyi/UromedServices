@@ -61,10 +61,16 @@ body {
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "_1intro(home)";
+@import "_2main(home)";
+@import "_3catalog(home)";
+@import "_4questions(home)";
+@import "_5rewievs(home)";
+@import "_6news(home)";
+
 @import "_header";
 @import "_footer";
-
-
+@import "_consultation";
 @import "_icons";
 @import "_slider";
 @import "_burger";

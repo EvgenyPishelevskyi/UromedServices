@@ -1,11 +1,11 @@
 /* Бургер */
 
-// $('.burger').on('click', () => {
-//    $('.burger').toggleClass('active');
-//    $('.mobile nav').toggleClass('open');
-//    $('.mobile__nav').toggleClass('show');
-// 	$('body').toggleClass('_lock')
-// });
+$('.burger').on('click', () => {
+   $('.burger').toggleClass('active');
+   $('.mobile nav').toggleClass('open');
+   $('.mobile__nav').toggleClass('show');
+	$('body').toggleClass('_lock')
+});
 
 
 /* Бургер */

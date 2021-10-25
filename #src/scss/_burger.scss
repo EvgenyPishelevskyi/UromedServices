@@ -5,7 +5,6 @@
    width: 50px;
    border-radius: 50%;
    z-index: 9999999;
-   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
    cursor: pointer;
    box-sizing: content-box;
    color: #7a7a7a;
@@ -19,6 +18,7 @@
       height: 4px;
       border-radius: 13px;
       transition-duration: .4s;
+      background: #007F00;
 
       &:nth-child(1) {
          top: 15px;
@@ -32,113 +32,126 @@
          bottom: 13px;
       }
    }
+}
 
-   .active {
-      span {
-         &:nth-child(1) {
-            transform: translate(-15px, 10px) rotate(-45deg);
-            left: 50%;
-         }
+.active {
+   span {
+      &:nth-child(1) {
+         transform: translate(-15px, 10px) rotate(-45deg);
+         left: 50%;
+      }
 
-         &:nth-child(2) {
-            transition-duration: 0s;
-            opacity: 0;
-         }
+      &:nth-child(2) {
+         transition-duration: 0s;
+         opacity: 0;
+      }
 
-         &:nth-child(3) {
-            transform: translate(-15px, -9px) rotate(45deg);
-            left: 50%;
-         }
+      &:nth-child(3) {
+         transform: translate(-15px, -9px) rotate(45deg);
+         left: 50%;
       }
    }
 }
 
-nav {
-   display: none;
-}
-
 .mobile {
-   padding: 0px 20px;
+   padding: 0px 0px 0px 20px;
 
    nav {
       display: none;
+      overflow: hidden;
 
-      @media (min-width: $md2 + px) {
-         display: block;
-      }
-
-      padding: 134px 40px 80px 40px;
+      padding: 0px 0px 45px 0px;
       position: absolute;
-      top: 0px;
-      height: 50px;
-      width: 50px;
+      top: -500px;
       border-radius: 50%;
-      z-index: 99;
-      transition-duration: .4s;
+      z-index: 39;
+      transition-duration: .7s;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: left;
-      overflow: hidden;
-
-      @media (max-width: $md4 +120.02px) {
-         padding: 134px 20px 80px 20px;
-      }
    }
 
    .open {
+      overflow: hidden;
       display: flex;
       position: fixed;
-      flex-direction: row;
-      justify-content: space-between;
       width: 100vw;
-      height: 100vh;
+      height: 65vh;
       right: 0px;
       bottom: 0px;
-      top: 0px;
+      top: 89px;
       border-radius: 0;
       z-index: 300;
+      background-color: $whiteColor;
 
+      @media (max-width: 530px) {
+         justify-content: space-around;
+      }
    }
 
 }
 
-.mobile__nav {
+._header-list__mobile {
    overflow: hidden;
-   .show {
+
+   ul {
       display: flex;
       flex-direction: column;
-      margin: 80px 0px 0px 0px;
-      padding: 0;
-   }
 
-   li {
-      background-color: transparent;
-      width: 100%;
-      text-align: left;
-      opacity: 0;
-      animation-name: fadein;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
+      li {
+         margin-bottom: 23px;
 
-      &:not(:last-child) {
-         margin-bottom: 22px;
-      }
+         &:last-child {
+            margin-bottom: 0px;
+         }
 
-      a {
-         display: flex;
-         padding: 10px;
-         margin: 0px 0px 20px 0px;
-         font-size: 24px;
-         text-transform: uppercase;
-         letter-spacing: 0.1em;
-         text-decoration: none;
-         color: #fff;
+         a {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            text-transform: uppercase;
+         }
       }
    }
 }
 
+._header_menu-info__mobile {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
 
-.mobile{
+.header-top__mobile {
+   overflow: hidden;
+   padding: 8px 0px 6px 0px;
+   @extend %bg;
+   text-align: center;
+   width: 100%;
+
+
+   span {
+      font-size: 12px;
+      line-height: 14px;
+      color: $whiteColor;
+      text-transform: uppercase;
+      overflow: hidden;
+   }
+}
+
+.mobile {
    display: none;
+
+   @media (max-width:1110px) {
+      display: flex;
+      flex: 0 1 10%;
+   }
+}
+
+.burger-wrapper {
+   padding: 0px 20px 26px 26px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   overflow: hidden;
 }
