@@ -1,0 +1,226 @@
+.main {
+   padding: 29px 0px 0px 0px;
+   background-color: #E5E5E5;
+}
+
+.main__container {
+   padding: 0px 50px;
+
+   @media (max-width: $md2 +px) {
+      padding: 0px 0px 0px 0px;
+   }
+}
+
+.brends {
+   padding: 6px 80px 4px 80px;
+   margin-bottom: 26px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   background-color: $whiteColor;
+
+   @media (max-width: $md2 + px) {
+      padding: 6px 20px 4px 20px;
+   }
+
+   img {
+      margin-right: 45px;
+
+      @media (max-width: 629px) {
+         margin-right: 0px;
+      }
+
+      &:last-child {
+         margin-right: 0px;
+      }
+   }
+}
+
+.comarovsky {
+   padding: 0px 0px 31px 0px;
+   display: flex;
+
+   @media (max-width: 1200px) {
+      flex-direction: column;
+   }
+}
+
+.comarovsky__info {
+   padding: 42px 0px 113px 40px;
+   flex: 0 1 50%;
+   margin-right: 16px;
+   background-image: url('../img/main(home)/bg-comarovski.png');
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+
+   @media (max-width: 1200px) {
+      margin: 0px;
+   }
+
+   @media (max-width: $md3 + px) {
+      padding: 42px 20px 113px 40px;
+      background-image: url('../img/main(home)/zerkalo.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+   }
+
+   @media (max-width: 585px) {
+      padding: 42px 20px 42px 20px;
+      background: linear-gradient(270deg, #2FA365 0%, #15545C 100%);
+   }
+
+   h2 {
+      font-family: Lato;
+      padding: 0px 0px 29px 0px;
+      @include adaptive-font (39, 16);
+      line-height: calc(40 / 39);
+      font-weight: 700;
+      color: $whiteColor;
+
+      @media (max-width: 585px) {
+         text-align: center;
+      }
+   }
+
+   p {
+      margin-bottom: 22px;
+      width: 70%;
+      font-family: Lato Medium;
+      @include adaptive-font (14, 16);
+      line-height: calc(19 / 14);
+      font-weight: 500;
+      color: $whiteColor;
+
+      @media (max-width: 1300px) {
+         width: 85%;
+      }
+
+      @media (max-width: $md3 + px) {
+         width: 100%;
+         text-align: left;
+      }
+
+
+      &:last-child {
+         margin-bottom: 0px;
+      }
+   }
+}
+
+.comarovsky__youtube {
+   padding: 31px 37px 0px 37px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex: 0 1 50%;
+   text-align: center;
+   background-color: $whiteColor;
+
+   @media (max-width: 585px) {
+      padding: 31px 0px 0px 0px;
+   }
+
+}
+
+._youtube__title {
+   padding: 0px 0px 18px 0px;
+   @include adaptive-font (21, 16);
+   line-height: calc(28 / 21);
+   color: $titleColor;
+   text-align: left;
+
+   @media (max-width: 585px) {
+      text-align: center;
+   }
+
+}
+
+iframe {
+   margin-bottom: 30px;
+
+   @media (max-width: 1300px) {
+      width: 480px;
+      height: 270px;
+   }
+
+   @media (max-width: 1200px) {
+      width: 580px;
+   }
+
+   @media (max-width: $md3 + px) {
+      width: 480px;
+   }
+
+   @media (max-width: 480px) {
+      width: 380px;
+      height: 210px;
+   }
+
+   @media (max-width: 350px) {
+      width: 320px;
+      height: 190px;
+   }
+}
+
+._youtube__link {
+   padding: 16px 32px;
+   margin-bottom: 26px;
+   @include adaptive-font (18, 16);
+   line-height: calc(18 / 24);
+   font-weight: 700;
+   color: $buttonColor;
+   border: 2px solid $buttonColor;
+}
+
+.advantages {
+   padding: 33px 33px 33px 33px;
+   margin-bottom: 37px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   background-color: $whiteColor;
+
+   @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+   }
+
+   @media (max-width: $md3 + px) {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   @media (max-width: $md4 + px) {
+      grid-template-columns: 1fr;
+      align-items: center;
+   }
+}
+
+.advantages__item {
+   display: flex;
+   width: 100%;
+   justify-content: flex-start;
+   align-items: center;
+
+   span {
+      width: 80%;
+      font-size: 14px;
+      line-height: 19px;
+   }
+}
+
+.details {
+   padding: 0px 0px 31px 0px;
+   img {
+      width: 100%;
+      object-fit: cover;
+   }
+
+   @media (max-width: 1200px){
+      display: none;
+   }
+}
