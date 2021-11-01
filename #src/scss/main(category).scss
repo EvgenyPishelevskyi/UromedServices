@@ -1,0 +1,34 @@
+.main-category {
+   padding: 27px 50px 0px 50px;
+
+   @media (max-width: $md3 +px){
+      padding: 27px 20px 0px 20px;
+   }
+}
+
+.main-category__nav {
+   padding: 0px 0px 23px 0px;
+   font-size: 14px;
+   line-height: 19px;
+
+   span {
+      color: $titleColor;
+   }
+}
+
+.main-category__title {
+   padding: 0px 0px 39px 0px;
+   @include adaptive-font (39, 16);
+   line-height: calc(40 / 39);
+   font-weight: 700;
+   color: $titleColor;
+}
+
+.main-category__sort {
+   padding: 0px 0px 37px 0px;
+   display: flex;
+
+   span{
+      margin-right: 16px;
+   }
+}

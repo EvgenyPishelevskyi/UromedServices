@@ -1,0 +1,23 @@
+.main-rewievs {
+   padding: 27px 50px 0px 50px;
+
+   @media (max-width: $md3 + px ){
+      padding: 27px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.rewiews__btn {
+   padding: 15px 40px;
+   margin-left: 100px;
+   @include adaptive-font (18, 16);
+   line-height: calc(24 / 18);
+   font-weight: 700;
+   color: $buttonColor;
+   border: 1px solid $buttonColor;
+
+   @media (max-width: 509px ){
+      margin-left: 20px;
+   }
+}

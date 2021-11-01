@@ -1,25 +1,33 @@
 .footer {
-   padding: 100px 0px;
+   padding: 100px 76px;
    display: flex;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-between;
    background: linear-gradient(270deg, #2FA365 0%, #15545C 100%);
+   flex-shrink: 0;
+
+   @media (max-width: 1300px) {
+      padding: 100px 40px;
+   }
 
    @media (max-width: 1200px) {
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 240px;
+   }
+
+   @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 100px;
    }
 
    @media (max-width: $md4 + px) {
-      flex-direction: column;
-      justify-content: space-between;
+      grid-column-gap: 50px;
+      padding: 100px 20px;
    }
 }
 
-.footer__logo {
-   @media (max-width: 1200px) {
-      display: none;
-   }
-}
 
 .logos {
    display: none;
@@ -29,13 +37,47 @@
    }
 }
 
+.footer__logo{
+   @media (max-width: 1200px){
+      margin-bottom: 40px;
+   }
+}
+
 .footer__list {
    display: flex;
+   flex-wrap: wrap;
 
    @media (max-width: 1200px) {
       flex-direction: column;
       order: 1;
    }
+
+   .footer-main {
+      color: $buttonColor;
+      position: relative;
+
+      &::before,
+      &::after {
+         content: '';
+         width: 10px;
+         height: 3px;
+         background-color: $buttonColor;
+         position: absolute;
+         top: 10px;
+         left: 1px;
+      }
+
+      &::before {
+         transform: rotate(40deg);
+         left: 68px;
+      }
+
+      &::after {
+         transform: rotate(-40deg);
+         left: 73.5px;
+      }
+   }
+
 
    li {
       margin-right: 30px;
@@ -62,13 +104,24 @@
    }
 }
 
+
 .footer__list-connect {
    display: flex;
    flex-direction: column;
+   justify-content: center;
 
 
    @media (max-width: 1200px) {
       order: 1;
+   }
+
+   .log {
+      @media (max-width: 1200px) {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
    }
 
    .footer_tel {
@@ -105,8 +158,6 @@
    }
 }
 
-
-
 .fa-phone-alt {
    color: white;
    margin-right: 5px;
@@ -115,4 +166,27 @@
 .fa-clock {
    color: white;
    margin-right: 5px;
+}
+
+.btn-up {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+
+   @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   span {
+      font-size: 18px;
+      color: $whiteColor;
+   }
+}
+
+.fa-hand-point-up {
+   color: $whiteColor;
+   font-size: 40px;
 }

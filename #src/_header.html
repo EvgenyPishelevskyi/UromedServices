@@ -14,7 +14,7 @@
 							<i class="fas fa-phone-alt"></i>
 							<a href="tel:+380664179583"> +380 66 417 95 83</a>
 						</div>
-						<span class="_connec__tel-rewerse">Обратный звонок</span>
+						<span id="callback-button"  class="_connec__tel-rewerse" data-backdrop="false" >Обратный звонок</span>
 						<div class="_connect__rallyTime">
 							<i class="far fa-clock"></i>
 							<p> ПН-ПТ: 10-19</p>
@@ -30,19 +30,28 @@
 					</div>
 				</div>
 				<div class="_header_menu__list">
-					<ul>
-						<li><a href="">Каталог</a></li>
-						<li><a href="">Гарантия</a></li>
+					<ul class="menu">
+						<li class="main_li">Каталог
+							<div class="submenu">
+								<span><a href="category.html">энурезные будильники</a></span>
+								<span><a href="category.html">пульсоксиметры</a></span>
+								<span><a href="category.html">термометры</a></span>
+								<span><a href="category.html">непромокаемые пелёнки</a></span>
+								<span><a href="category.html">небулайзеры</a></span>
+							</div>
+						</li>
+						<li><a href="">Гарантия</a>
+						</li>
 						<li><a href="">Оплата и доставка</a></li>
-						<li><a href="">Отзывы</a></li>
+						<li><a href="rewievs.html">Отзывы</a></li>
 						<li><a href="">Акции</a></li>
 						<li><a href="">статьи</a></li>
 						<li><a href="">О нас</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</div>
 			</div>
-			<span class="catalog">Каталог</span>
+			
 			<div class="header-section__shop">
 				<i class="fas fa-shopping-basket"></i>
 				@@include('_burger.html',{})
@@ -50,6 +59,6 @@
 
 		</div>
 	</div>
+	@@include('_popup.html',{})
 </header>
 
-@@include('_popup.html',{})

@@ -28,7 +28,7 @@
 							<i class="fas fa-phone-alt"></i>
 							<a href="tel:+380664179583"> +380 66 417 95 83</a>
 						</div>
-						<span class="_connec__tel-rewerse">Обратный звонок</span>
+						<span id="callback-button"  class="_connec__tel-rewerse" data-backdrop="false" >Обратный звонок</span>
 						<div class="_connect__rallyTime">
 							<i class="far fa-clock"></i>
 							<p> ПН-ПТ: 10-19</p>
@@ -44,19 +44,28 @@
 					</div>
 				</div>
 				<div class="_header_menu__list">
-					<ul>
-						<li><a href="">Каталог</a></li>
-						<li><a href="">Гарантия</a></li>
+					<ul class="menu">
+						<li class="main_li">Каталог
+							<div class="submenu">
+								<span><a href="category.html">энурезные будильники</a></span>
+								<span><a href="category.html">пульсоксиметры</a></span>
+								<span><a href="category.html">термометры</a></span>
+								<span><a href="category.html">непромокаемые пелёнки</a></span>
+								<span><a href="category.html">небулайзеры</a></span>
+							</div>
+						</li>
+						<li><a href="">Гарантия</a>
+						</li>
 						<li><a href="">Оплата и доставка</a></li>
-						<li><a href="">Отзывы</a></li>
+						<li><a href="rewievs.html">Отзывы</a></li>
 						<li><a href="">Акции</a></li>
 						<li><a href="">статьи</a></li>
 						<li><a href="">О нас</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</div>
 			</div>
-			<span class="catalog">Каталог</span>
+			
 			<div class="header-section__shop">
 				<i class="fas fa-shopping-basket"></i>
 				<div class="mobile">
@@ -85,7 +94,7 @@
                   <i class="fas fa-phone-alt"></i>
                   <a href="tel:+380664179583"> +380 66 417 95 83</a>
                </div>
-               <span class="_connec__tel-rewerse">Обратный звонок</span>
+               <span id="callback-button1" class="_connec__tel-rewerse">Обратный звонок</span>
                <div class="_connect__rallyTime">
                   <i class="far fa-clock"></i>
                   <p>ПН-ПТ: 10-19</p>
@@ -112,13 +121,39 @@
 
 		</div>
 	</div>
-</header>
-
- <div class="modal" id="modal-1">
+	 <div class="modal" id="modal-1">
     <div class="modal__content">
-       <button class="modal__close-button"><img src="img/close.svg" width="12" alt=""></button>
+       <div class="pop">
+         <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form-modal">
+            <div>
+               <input required type="tel" name="tel" placeholder="Ваш телефон*" class="input">
+            </div>
+         </form>
+         <button id="callback-button2" class="call_me" data-backdrop="false">позвоните мне</button>
+       </div>
+       <button class="modal__close-button"><img src="img/icons/close.png" width="12" alt=""></button>
     </div>
  </div>
+
+
+ <div class="modal" id="modal-2">
+    <div class="modal__content">
+      <div class="thanks">
+         <div><img src="img/icons/flat-color-icons_ok.png" alt=""></div>
+         <p class="thanks__text">
+            <span>Спасибо </span>,<br>
+            мы скоро перезвоним
+         </p>
+      </div>
+       <button class="modal__close-button"><img src="img/icons/close.png" width="12" alt=""></button>
+    </div>
+ </div>
+
+
+
+</header>
+
+
 			<main>
 				<section class="intro">
    <div class="intro__container">
@@ -688,12 +723,12 @@
       <img src="img/footer/Group.png" alt="">
    </div>
    <ul class="footer__list">
-      <li><a href="">Каталог</a></li>
+      <li><a href="" class="footer-main">Каталог</a>
+         </li>
       <li><a href="">Гарантия</a></li>
       <li><a href="">Оплата и доставка</a></li>
       <li><a href="">Отзывы</a></li>
       <li><a href="">Акции</a></li>
-      <li><a href="">статьи</a></li>
       <li><a href="">О нас</a></li>
       <li><a href="">Контакты</a></li>
    </ul>
@@ -708,12 +743,12 @@
             <i class="far fa-clock"></i>
             <p>ПН-ПТ: 10-19</p>
          </div>
-   
+
       </div>
-      <div class="logos">
-         <img src="img/footer/Group.png" alt="">
-      </div>
-   
+   </div>
+   <div id="button-up" class="btn-up">
+      <i class="fas fa-hand-point-up"></i>
+      <span>Вверх</span>
    </div>
 </div>
 		</div>

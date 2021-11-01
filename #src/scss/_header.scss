@@ -54,16 +54,16 @@
    display: flex;
    flex-direction: column;
    flex: 0 1 80%;
-
-   @media (max-width: 1110px) {
-      display: none;
-   }
 }
 
 ._header_menu__info {
    padding: 0px 0px 16.5px 0px;
    display: flex;
    border-bottom: 1px solid #ECECEC;
+
+   @media (max-width: 1110px) {
+      display: none;
+   }
 }
 
 ._info__connect {
@@ -83,8 +83,8 @@
    align-items: center;
 
    @media (max-width: 1110px) {
-     margin-bottom: 23px;
-     margin-right: 0px;
+      margin-bottom: 23px;
+      margin-right: 0px;
    }
 
    a {
@@ -105,11 +105,12 @@
    color: #222222;
    text-transform: uppercase;
    border-bottom: 1px dashed #222222;
+   cursor: pointer;
 
    @media (max-width: 1110px) {
       margin-bottom: 23px;
       margin-right: 0px;
-    }
+   }
 }
 
 ._connect__rallyTime {
@@ -118,7 +119,7 @@
 
    @media (max-width: 1110px) {
       margin-bottom: 34px;
-    }
+   }
 
    p {
       font-size: 12px;
@@ -138,7 +139,7 @@
 
    @media (max-width: 1110px) {
       margin-bottom: 32px;
-    }
+   }
 
    p {
       font-size: 12px;
@@ -167,11 +168,55 @@
 ._header_menu__list {
    padding: 20px 0px 0px 0px;
 
-   ul {
+   .menu {
       display: flex;
 
+      @media (max-width: 1110px) {
+         justify-content: center;
+      }
+
+      .main_li {
+         color: $buttonColor;
+         position: relative;
+         cursor: pointer;
+         font-size: 14px;
+         font-weight: 700;
+         line-height: 16px;
+         text-transform: uppercase;
+
+         @media (max-width: 1110px) {
+            display: block;
+         }
+
+         &::before,
+         &::after {
+            content: '';
+            width: 10px;
+            height: 3px;
+            background-color: $buttonColor;
+            position: absolute;
+            top: 6px;
+            left: 1px;
+         }
+
+         &::before {
+            transform: rotate(40deg);
+            left: 73px;
+         }
+
+         &::after {
+            transform: rotate(-40deg);
+            left: 77.5px;
+         }
+      }
+
       li {
+         position: relative;
          margin-right: 63px;
+
+         @media (max-width: 1110px) {
+            display: none;
+         }
 
          @media (max-width: 1425px) {
             margin-right: 43px;
@@ -217,4 +262,40 @@
 .fa-shopping-basket {
    font-size: 35px;
    color: #007F00;
+}
+
+
+.submenu {
+   padding: 18px 22px;
+   background-color: $whiteColor;
+   position: absolute;
+   text-align: center;
+   left: -50%;
+   top: 36px;
+   display: none;
+
+
+   span {
+      width: 100%;
+      display: block;
+      margin-bottom: 32px;
+      margin-right: 0px !important;
+
+      @media (max-width: 480px) {
+         border-bottom: 1px solid #ECECEC;
+      }
+
+
+      &:last-child {
+         margin-bottom: 0px;
+      }
+
+      a {
+         font-size: 14px;
+         font-weight: 700;
+         line-height: 16px;
+         color: $buttonColor;
+         text-transform: uppercase;
+      }
+   }
 }

@@ -1,0 +1,63 @@
+.posts-rewievs {
+   padding: 0px 50px 0px 50px;
+
+   @media (max-width: $md2 + px ){
+      padding: 0px 20px 0px 20px;
+   }
+
+   @media (max-width: $md3 + px ){
+      padding: 0px 0px 0px 0px;
+   }
+}
+
+.posts-rewievs__blocks {
+   padding: 63px 0px 0px 0px;
+   background-color: $whiteColor;
+}
+
+.posts-rewievs__block {
+   padding: 0px 175px 0px 175px;
+   position: relative;
+   margin-bottom: 80px;
+
+   
+   @media (max-width: $md2 + px ){
+      padding: 0px 20px 0px 20px;
+   }
+}
+
+._rewievs-block__name {
+   padding: 0px 0px 23px 0px;
+
+   span {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 24px;
+   }
+
+   p {
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 21px;
+   }
+}
+
+._rewievs-block__text {
+   font-size: 18px;
+   line-height: 24px;
+
+   @media (max-width: $md3 + px ){
+      padding: 0px 0px 20px 0px;
+   }
+}
+
+._rewievs-block__stars{
+   position: absolute;
+   right: 5%;
+   top: 0;
+
+   @media (max-width: $md3 + px ){
+      position: static;
+   }
+}
