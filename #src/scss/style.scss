@@ -81,6 +81,7 @@ main{
 @import "_5rewievs(home)";
 @import "_6news(home)";
 
+
 @import "_header";
 @import "_footer";
 @import "_consultation";
@@ -99,6 +100,9 @@ main{
 @import "main(rewievs)";
 @import "posts(rewievs)";
 
+
+@import "main(about-us)";
+@import "cards(about-us)"
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
