@@ -1,0 +1,181 @@
+.presents {
+   padding: 0px 50px 92px 50px;
+
+   @media (max-width:($md3+ px)) {
+      padding: 0px 15px 92px 15px;
+   }
+}
+
+.presents__blocks {
+   display: flex;
+
+   @media (max-width:($md2 + px)) {
+      flex-direction: column;
+   }
+}
+
+.blocks-present__brave {
+   padding: 10px;
+   margin-right: 15px;
+   height: 633px;
+   flex: 50%;
+   background: linear-gradient(270deg, #2FA365 0%, #15545C 100%);
+   position: relative;
+
+   @media (max-width:($md2 + px)) {
+      margin-right: 0px;
+      margin-bottom: 67px;
+   }
+}
+
+.brave__title {
+   display: block;
+   width: 80%;
+   padding: 82px 0px 0px 48px;
+   @include adaptive-font (39, 16);
+   line-height: calc(40 / 39);
+   font-weight: 700;
+   color: $whiteColor;
+
+   @media (max-width:( 500px)){
+      padding:82px 0px 0px 20px;
+      width: 90%;
+   }
+}
+
+.brave__descr {
+   display: block;
+   width: 41%;
+   padding: 50px 0px 0px 48px;
+   @include adaptive-font (18, 16);
+   line-height: calc(24 / 18);
+   color: $whiteColor;
+
+   @media (max-width:(1280px)) {
+      width: 70%;
+   }
+
+   @media (max-width:(  500px)){
+      padding:50px 0px 0px 20px;
+      width: 80%;
+   }
+}
+
+.brave__pic {
+   position: absolute;
+   top: 207px;
+   left: 207px;
+
+   @media (max-width:(1280px)) {
+      top: 307px;
+      left: 107px;
+   }
+
+   @media (max-width:($md2 + px)) {
+      position: relative;
+      top: 86px;
+      left: 0px;
+   }
+
+   img {
+      width: 100%;
+      min-width: 335px;
+
+      @media (max-width:(1280px)) {
+         width: 335px;
+      }
+
+      @media (max-width:($md2 + px)) {
+         width: 100%;
+      }
+
+      @media (max-width:($md4 + px)) {
+         min-width: 0%;
+      }
+   }
+}
+
+.blocks-present__other {
+   flex: 50%;
+}
+
+.other-present__cube {
+   padding: 10px;
+   margin-bottom: 15px;
+   background-image: url('../img/stocks/cube.png');
+   @include background-image;
+   height: 300px;
+
+   @media (max-width:( 500px)){
+      background-position: -243px center;
+   }
+}
+
+.cube__title {
+   padding: 34px 0px 30px 37px;
+   display: block;
+   width: 70%;
+   @include adaptive-font (31, 16);
+   line-height: calc(32 / 31);
+   font-weight: 700;
+   color: $mainColor;
+
+   @media (max-width:( 500px)){
+      padding:34px 0px 30px 20px;
+      width: 90%;
+   }
+}
+
+.cube__descr {
+   padding: 0px 0px 0px 37px;
+   display: block;
+   width: 57%;
+   @include adaptive-font (18, 16);
+   line-height: calc(24 / 18);
+   color: $mainColor;
+
+   @media (max-width:( 500px)){
+      padding:0px 0px 0px 20px;
+      width: 80%;
+   }
+}
+
+.other-present__consult {
+   background-image: url('../img/stocks/cons.png');
+   @include background-image;
+   height: 318px;
+
+   @media (max-width:( 500px)){
+      background-position: -243px center;
+   }
+}
+
+
+.present-consult__title {
+   padding: 34px 0px 30px 37px;
+   display: block;
+   width: 80%;
+   @include adaptive-font (31, 16);
+   line-height: calc(32 / 31);
+   font-weight: 700;
+   color: $mainColor;
+
+   @media (max-width:( 500px)){
+      padding:34px 0px 30px 20px;
+      width: 90%;
+   }
+}
+
+.present-consult__descr {
+   padding: 0px 0px 0px 37px;
+   display: block;
+   width: 60%;
+   @include adaptive-font (18, 16);
+   line-height: calc(24 / 18);
+   color: $mainColor;
+
+   @media (max-width:( 500px)){
+      padding:0px 0px 0px 20px;
+      width: 80%;
+   }
+}
